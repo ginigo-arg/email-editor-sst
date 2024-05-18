@@ -1,0 +1,40 @@
+{
+  "name": "easy-email",
+  "scripts": {
+    "install-all": "lerna exec -- yarn --force && cd demo && yarn --force",
+    "install-all2": "lerna exec -- npm i --force && cd demo && npm i --force",
+    "vercel-install": "lerna exec -- yarn install --network-concurrency 1 && cd demo && yarn install --network-concurrency 1",
+    "build": "npm run install-all2 && npm run build:core2 && npm run build:editor2 && npm run build:extensions2 && npm run demo2",
+    "build2": "yarn build:core && yarn build:editor && yarn build:extensions && yarn demo",
+    "build:core": "cd packages/easy-email-core && yarn build",
+    "build:core2": "cd packages/easy-email-core && npm run build",
+    "build:editor": "cd packages/easy-email-editor && yarn build",
+    "build:editor2": "cd packages/easy-email-editor && npm run build",
+    "build:extensions": "cd packages/easy-email-extensions && yarn build",
+    "build:extensions2": "cd packages/easy-email-extensions && npm run build",
+    "dev": "cd demo && yarn dev",
+    "demo": "cd demo && yarn build",
+    "demo2": "cd demo && npm run build",
+    "test": "yarn test:core && yarn test:extensions",
+    "test:core": "cd packages/easy-email-core && yarn test",
+    "test:extensions": "cd packages/easy-email-extensions && yarn test",
+    "translate": "ts-node scripts/translate.ts",
+    "lint": "lerna exec -- yarn format"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "@types/file-saver": "^2.0.5",
+    "easy-localized-translation": "^1.1.0",
+    "file-saver": "^2.0.5",
+    "lerna": "^4.0.0",
+    "liquidjs": "^9.34.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.8.4",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "dotenv": "^16.0.3",
+    "sst": "^2.41.5"
+  }
+}

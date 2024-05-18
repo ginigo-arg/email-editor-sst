@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta
+      name="description"
+      content="Easy email is developed based on the MJML and has very good compatibility. At the same time, it can generate code through drag-and-drop editing."
+    /> -->
+    <!-- <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', '85gnvzh5py');
+    </script> -->
+    <!-- <meta name="updated-time" content="Fri, 17 May 2024 16:30:22 GMT" /> -->
+    <title>easy email</title>
+    <!-- Google Tag Manager -->
+    <!-- <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-N6T7TGX');
+    </script> -->
+    <!-- End Google Tag Manager -->
+    <script crossorigin="">import('https://dmx8xycphncnp.cloudfront.net/assets/index.ac2f4a22.js').finally(() => {
+            
+    const qiankunLifeCycle = window.moudleQiankunAppLifeCycles && window.moudleQiankunAppLifeCycles['email-editor'];
+    if (qiankunLifeCycle) {
+      window.proxy.vitemount((props) => qiankunLifeCycle.mount(props));
+      window.proxy.viteunmount((props) => qiankunLifeCycle.unmount(props));
+      window.proxy.vitebootstrap(() => qiankunLifeCycle.bootstrap());
+      window.proxy.viteupdate((props) => qiankunLifeCycle.update(props));
+    }
+  
+          })</script>
+    <link rel="modulepreload" href="https://dmx8xycphncnp.cloudfront.net/assets/lodash.6d14d791.js">
+    <link rel="modulepreload" href="https://dmx8xycphncnp.cloudfront.net/assets/mjml-browser.171980e5.js">
+    <link rel="stylesheet" href="https://dmx8xycphncnp.cloudfront.net/assets/index.2c0c3f1f.css">
+  </head>
+
+  <body style="height: 100vh">
+    <div id="root" style="width: 100%; height: 100%">
+      <!-- <div
+        style="
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img
+          width="200px"
+          src="/loading"
+          alt=""
+        />
+        <p style="font-size: 24px; color: rgba(0, 0, 0, 0.65)">Please wait a moment.</p>
+      </div> -->
+    </div>
+    
+    <!-- <script
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="easyemail"
+      data-description="Support me on Buy me a coffee!"
+      data-message="Thanks for your coffee."
+      data-color="#FF813F"
+      data-position="Right"
+      data-x_margin="18"
+      data-y_margin="18"
+    ></script> -->
+  
+
+<script>
+  const createDeffer = (hookName) => {
+    const d = new Promise((resolve, reject) => {
+      window.proxy && (window.proxy[`vite${hookName}`] = resolve)
+    })
+    return props => d.then(fn => fn(props));
+  }
+  const bootstrap = createDeffer('bootstrap');
+  const mount = createDeffer('mount');
+  const unmount = createDeffer('unmount');
+  const update = createDeffer('update');
+
+  ;(global => {
+    global.qiankunName = 'email-editor';
+    global['email-editor'] = {
+      bootstrap,
+      mount,
+      unmount,
+      update
+    };
+  })(window);
+</script></body></html>
